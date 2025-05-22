@@ -25,6 +25,7 @@ gem "enum_help"
 gem "bootstrap_form", "~> 5.4"
 gem "holiday_japan"
 gem "simple_calendar"
+gem "gimei"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"

@@ -27,7 +27,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_05_22_082802) do
     t.index ["unlock_token"], name: "index_administrators_on_unlock_token", unique: true
   end
 
-  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "users", id: { type: :string, limit: 36 }, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "first_name", default: "", null: false
     t.string "last_name", default: "", null: false
     t.string "email", default: "", null: false
