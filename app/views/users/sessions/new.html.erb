@@ -1,0 +1,12 @@
+<div class="col-md-6 col-lg-4 mx-auto">
+  <h2><%= resource.class.model_name.human %>ログイン</h2>
+  <%= bootstrap_form_with model: resource, as: resource_name, url: session_path(resource_name) do |f| %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.password_field :password, autocomplete: "current-password" %>
+    <% if devise_mapping.rememberable? %>
+      <%= f.check_box :remember_me %>
+    <% end %>
+    <%= f.submit "ログイン" %>
+  <% end %>
+  <%= render "administrators/shared/links" %>
+</div>
