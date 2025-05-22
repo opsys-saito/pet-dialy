@@ -1,0 +1,8 @@
+<div>
+  <h2><%= Pet.model_name.human %>追加</h2>
+  <%= bootstrap_form_with model: @pet, url: "#" do |f| %>
+    <%= f.text_field :name %>
+    <%= f.collection_radio_buttons :animal_type, { "未入力": "" }.merge(Pet.animal_types_i18n), :first, :last %>
+    <%= f.submit "作成" %>
+  <% end %>
+</div>

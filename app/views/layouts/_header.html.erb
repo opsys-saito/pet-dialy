@@ -23,6 +23,9 @@
             </li>
           <% elsif current_user %>
             <li class="nav-item">
+              <%= link_to Pet.model_name.human, users_pets_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
               <%= link_to "ログアウト", destroy_user_session_path, class: "nav-link",
                 data: { turbo_method: :delete, turbo_confirm: "ログアウトしてよろしいですか？" } %>
             </li>

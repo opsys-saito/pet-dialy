@@ -1,0 +1,9 @@
+<div>
+  <h2><%= Pet.model_name.human %>一覧</h2>
+  <%= link_to "追加", new_users_pet_path, class: "link-dark" %>
+  <ul class="list-group">
+    <% current_user.pets.each do |pet| %>
+      <li class="list-group-item"></li>
+    <% end %>
+  </ul>
+</div>

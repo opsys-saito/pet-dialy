@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
   before_create :set_uuid
 
+  has_many :pets, dependent: :destroy
+
   private
     def set_uuid
       until id

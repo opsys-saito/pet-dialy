@@ -22,5 +22,6 @@ Rails.application.routes.draw do
 
   namespace :users do
     resource :calendars, only: :show
+    resources :pets
   end
 end
