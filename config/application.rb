@@ -28,6 +28,11 @@ module PetDialy
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w[assets tasks])
 
+    config.time_zone = "Asia/Tokyo"
+    config.active_record.default_timezone = :utc
+
+    config.i18n.default_locale = :ja
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
@@ -38,5 +43,11 @@ module PetDialy
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.generators do |g|
+      g.assets         false
+      g.helper         false
+      g.skip_routes    true
+      g.test_framework false
+    end
   end
 end
