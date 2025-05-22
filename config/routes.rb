@@ -19,4 +19,8 @@ Rails.application.routes.draw do
   namespace :administrators do
     resources :users, only: :index
   end
+
+  namespace :users do
+    resource :calendars, only: :show
+  end
 end
