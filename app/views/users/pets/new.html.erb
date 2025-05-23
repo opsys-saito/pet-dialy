@@ -1,5 +1,5 @@
 <div>
-  <h2><%= Pet.model_name.human %>作成</h2>
+  <%= breadcrumb(link_to(Pet.model_name.human, users_pets_path), "作成") %>
   <%= bootstrap_form_with model: @pet, url: users_pets_path, label_errors: true, html: { novalidate: true } do |f| %>
     <%= render "form", f: %>
     <%= f.submit "作成" %>

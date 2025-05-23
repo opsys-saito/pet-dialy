@@ -1,7 +1,7 @@
 <div class="col-lg-6 mx-auto">
-  <h2><%= Pet.model_name.human %>一覧</h2>
-  <%= link_to "追加", new_users_pet_path, class: "link-dark" %>
-  <ul class="list-group">
+  <%= breadcrumb(Pet.model_name.human) %>
+  <%= link_to "追加", new_users_pet_path, class: "btn btn-outline-dark" %>
+  <ul class="list-group mt-3">
     <% current_user.pets.each do |pet| %>
       <%= link_to edit_users_pet_path(pet), class: "list-group-item list-group-item-action d-flex flex-wrap gap-3" do %>
         <%= pet.name %>
