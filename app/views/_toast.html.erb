@@ -1,0 +1,10 @@
+<%= tag.div class: [:toast, { "notice" => "text-bg-primary", "alert" => "text-bg-danger" }[type ||= nil] || "bg-white"],
+  role: :status, "aria-live": :polite, "aria-atomic": :true, data: { controller: :toast, "bs-delay": 3500 } do %>
+  <div class="toast-header">
+    <%= title ||= "" %>
+    <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast" aria-label="閉じる"></button>
+  </div>
+  <div class="toast-body">
+    <%= content %>
+  </div>
+<% end %>

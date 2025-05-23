@@ -1,0 +1,3 @@
+<% flash.each do |key, value| %>
+  <%= render "/toast", type: key, content: value %>
+<% end %>

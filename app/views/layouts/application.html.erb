@@ -23,6 +23,9 @@
   </head>
 
   <body style="padding-top: 4.5rem;">
+    <div class="toast-container position-fixed top-0 end-0 mt-3 pt-5 pe-3" id="toast">
+      <%= render "/flash" %>
+    </div>
     <%= render "/layouts/header" %>
     <div class="container">
       <div class="row">
