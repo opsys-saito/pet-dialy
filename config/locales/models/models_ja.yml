@@ -3,6 +3,9 @@ ja:
     attributes:
       pet:
         animal_type: 動物の種類
+        birthed_on: 誕生日
+        gender: 性別
+        note: メモ
         name: 名前
     models:
       administrator: 管理者
@@ -20,3 +23,8 @@ ja:
       animal_type:
         cat: 猫
         dog: 犬
+        none: なし
+      gender:
+        female: メス
+        male: オス
+        none: なし

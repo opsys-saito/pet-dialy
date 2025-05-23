@@ -1,0 +1,5 @@
+<%= f.text_field :name %>
+<%= f.collection_radio_buttons :animal_type, Pet.animal_types_i18n, :first, :last %>
+<%= f.collection_radio_buttons :gender, Pet.genders_i18n, :first, :last %>
+<%= f.date_field :birthed_on %>
+<%= f.text_area :note %>

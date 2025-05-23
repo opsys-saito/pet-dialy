@@ -1,8 +1,7 @@
 <div>
-  <h2><%= Pet.model_name.human %>追加</h2>
-  <%= bootstrap_form_with model: @pet, url: "#" do |f| %>
-    <%= f.text_field :name %>
-    <%= f.collection_radio_buttons :animal_type, { "未入力": "" }.merge(Pet.animal_types_i18n), :first, :last %>
+  <h2><%= Pet.model_name.human %>作成</h2>
+  <%= bootstrap_form_with model: @pet, url: users_pets_path, label_errors: true, html: { novalidate: true } do |f| %>
+    <%= render "form", f: %>
     <%= f.submit "作成" %>
   <% end %>
 </div>
